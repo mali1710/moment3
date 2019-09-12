@@ -5,12 +5,14 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const imagemin = require("gulp-imagemin");
 
 //Sökvägar
 const files = {
   htmlPath: "src/**/*.html",
   jsPath: "src/**/*.js",
-  sassPath: "src/scss/**/*.scss"
+  sassPath: "src/scss/**/*.scss",
+  imagePath: "src/images/*"
 };
 
 //HTML-filer
@@ -34,12 +36,22 @@ function jsTask() {
     .pipe(dest("pub/js"));
 }
 
+//Bildoptimering
+function imageTask() {
+  return src(files.imagePath)
+    .pipe(imagemin())
+    .pipe(dest("pub/images"));
+}
+
 //Watcher
 function watchTask() {
   watch(
-    [files.htmlPath, files.sassPath, files.jsPath],
-    parallel(copyHTML, scssTask, jsTask)
+    [files.htmlPath, files.sassPath, files.jsPath, files.imagePath],
+    parallel(copyHTML, scssTask, jsTask, imageTask)
   );
 }
 
-exports.default = series(parallel(copyHTML, scssTask, jsTask), watchTask);
+exports.default = series(
+  parallel(copyHTML, scssTask, jsTask, imageTask),
+  watchTask
+);
