@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const imagemin = require("gulp-imagemin");
+const sourcemaps = require("gulp-sourcemaps");
 
 //Sökvägar
 const files = {
@@ -23,8 +24,10 @@ function copyHTML() {
 //Sass-CSS-filer
 function scssTask() {
   return src(files.sassPath)
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write())
     .pipe(dest("pub/css"));
 }
 
