@@ -1,5 +1,34 @@
 @import "config";
+@import "mixins";
+@import "navbar";
+@import "hero";
+@import "projects";
+@import "about";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   background-color: $bg-color;
+  color: set-text-color($bg-color);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  border-bottom: 1px solid $font-color;
+}
+h2 {
+  font-family: $header-font;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-weight: 100;
+  font-style: italic;
 }

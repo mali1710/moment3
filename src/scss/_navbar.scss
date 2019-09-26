@@ -1,0 +1,80 @@
+header {
+  background-color: $bg-color;
+  position: sticky;
+  height: 2.5rem;
+  top: 0;
+
+  @include breakpoint(large) {
+    height: 4rem;
+  }
+}
+
+.navbar {
+  .main-nav {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+    background-color: $bg-color;
+    align-items: center;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100%;
+
+    a:hover {
+      color: $hover-color;
+      transition: 0.5s ease-in-out;
+    }
+
+    li {
+      padding: 3rem 0;
+    }
+
+    @include breakpoint(large) {
+      display: block;
+      display: flex;
+      position: relative;
+      max-height: 8vh;
+      padding: 1rem;
+      flex-direction: row;
+      max-width: 40%;
+      justify-content: space-between;
+      border-bottom: 1px solid $font-color;
+      padding: 1rem;
+    }
+  }
+
+  .nav-links {
+    text-decoration: none;
+    color: set-text-color($bg-color);
+    font-family: $link-font;
+  }
+
+  .navbar-toggle {
+    display: block;
+    color: set-text-color($bg-color);
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+
+  // .main-nav.active {
+  //   display: flex;
+  //   background-color: $bg-color;
+  //   flex-direction: column;
+  //   border-bottom: none;
+  //   height: 100vh;
+  //   top: 0;
+  //   width: 100%;
+  //   transition: 1s ease-in-out;
+  // }
+}

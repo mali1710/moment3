@@ -1,1 +1,18 @@
-$bg-color: beige;
+//Colors
+$bg-color: hsl(9, 21%, 94%);
+$font-color: hsl(0, 0%, 44%);
+$hover-color: #93a29c;
+
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Lato:100i,300,400,700|Open+Sans:400,700&display=swap");
+$header-font: "Open Sans", sans-serif;
+$link-font: "Lato", sans-serif;
+
+//Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #707070;
+  } @else {
+    @return #ebd7d2;
+  }
+}

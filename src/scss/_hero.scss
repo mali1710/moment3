@@ -1,0 +1,45 @@
+.hero {
+  width: 90%;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  img {
+    width: 100%;
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+  }
+
+  .hero-text {
+    grid-column: 1 / 5;
+    grid-row: 2 / 4;
+    background-color: rgba($bg-color, 0.7);
+    color: $font-color;
+    display: flex;
+    justify-content: center;
+    font-family: $header-font;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      grid-column: 2 / 4;
+      border: 1px solid $font-color;
+    }
+  }
+
+  @include breakpoint(large) {
+    width: 70%;
+
+    h1 {
+      font-size: 2.5em;
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-top: 0.5em;
+    }
+  }
+}

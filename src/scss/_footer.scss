@@ -1,0 +1,14 @@
+footer {
+  color: set-text-color($bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+
+  p {
+    @extend .p-text;
+  }
+}

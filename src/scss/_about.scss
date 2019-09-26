@@ -1,0 +1,53 @@
+.about {
+  width: 90%;
+  margin: 0 auto 2rem;
+  background-color: darken($font-color, 0.7);
+  color: set-text-color($font-color);
+  height: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
+
+  .about-text {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .p-text {
+      font-family: $link-font;
+      padding: 0 1em 1em;
+      line-height: 1.5;
+    }
+  }
+
+  @include breakpoint(large) {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+    .about-image {
+      flex-basis: 50%;
+      flex: 1;
+      height: 400px;
+
+      img {
+        height: 400px;
+      }
+    }
+
+    .about-text {
+      flex-basis: 50%;
+      flex: 1;
+
+      p {
+        padding: 0 2em;
+      }
+    }
+  }
+}

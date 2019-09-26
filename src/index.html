@@ -5,21 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1>Hej</h1>
+    <header>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="#" class="nav-links">Hem</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-links">Projekt</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-links">Om mig</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Kontakt</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Blogg</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Testar gulp</p>
-    <p>För att köra detta projekt, gör följande:</p>
-    <ul>
-      <li>Hämta ned från GitHub</li>
-      <li>Kör npm-init</li>
-      <li>Starta gulp med kommandot "gulp"</li>
-      <li>Redigera filer i src-mapp</li>
-      <li>Publicera mappen "pub"</li>
-    </ul>
+    <main>
+      <section class="hero">
+        <img src="images/bg.jpg" alt="Butterfly on flower" />
+        <div class="hero-text">
+          <h1>Anna Andersson</h1>
+          <h3>Fotograf & Florist</h3>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="card one">
+          <div class="card-text">
+            <h4 class="card-title">Naturfotografering</h4>
+            <h3 class="card-desc">Företag AB</h3>
+          </div>
+        </div>
+        <div class="card two">
+          <div class="card-text">
+            <h4 class="card-title">Styling</h4>
+            <h3 class="card-desc">Mäklare AB</h3>
+          </div>
+        </div>
+        <div class="card three">
+          <div class="card-text">
+            <h4 class="card-title">Bröllop</h4>
+            <h3 class="card-desc">Privat</h3>
+          </div>
+        </div>
+        <div class="card four">
+          <div class="card-text">
+            <h4 class="card-title">Styling</h4>
+            <h3 class="card-desc">Tidning AB</h3>
+          </div>
+        </div>
+        <div class="card five">
+          <div class="card-text">
+            <h4 class="card-title">Företagsevent</h4>
+            <h3 class="card-desc">Företag AB</h3>
+          </div>
+        </div>
+        <div class="card six">
+          <div class="card-text">
+            <h4 class="card-title">Katalog</h4>
+            <h3 class="card-desc">Florist AB</h3>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about-image">
+          <img src="../pub/images/about.jpg" alt="Kamera i buskage" />
+        </div>
+        <div class="about-text" id="about">
+          <h2>Om mig</h2>
+          <p class="p-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad omnis
+            eaque quibusdam, enim id consectetur quisquam rem magni dolore,
+            commodi inventore necessitatibus eos quia repellendus sapiente, ea
+            voluptatibus quod animi.Totam explicabo vero eos mollitia omnis
+            distinctio consectetur, ex sunt deleniti, veritatis modi fuga dicta
+            ab? Facilis, veritatis. Incidunt dignissimos est pariatur error
+            tempora quae magni necessitatibus ut dolorum iure.
+          </p>
+        </div>
+      </section>
+    </main>
 
-    <script src="js/main.js"></script>
+    <footer>
+      <p>Copyright &copy; 2019</p>
+      <p>Malin Lind mali1710@student.miun.se</p>
+    </footer>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
