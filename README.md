@@ -52,6 +52,6 @@ Mappar ut CSS för utvecklingsverktygen i browsern så man lätt kan hitta till 
 
 ## Om systemet
 
-För att använda detta system så klonar man ner det till sin egna dator med länken: [https://github.com/mali1710/Moment2.git].
+För att använda detta system så klonar man ner det till sin egna dator med länken: [https://github.com/mali1710/moment3.git].
 
 Kör sedan "npm init" för att installera. För att sätta igång gulp-processerna kör kommandot "gulp".
