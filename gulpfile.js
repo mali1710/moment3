@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const imagemin = require("gulp-imagemin");
 const sourcemaps = require("gulp-sourcemaps");
+const babel = require("gulp-babel");
 
 //Sökvägar
 const files = {
@@ -34,8 +35,11 @@ function scssTask() {
 //JS-filer
 function jsTask() {
   return src(files.jsPath)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(concat("main.js"))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(dest("pub/js"));
 }
 

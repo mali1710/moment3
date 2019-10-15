@@ -48,7 +48,11 @@ Minifierar bilderna på sidan.
 
 #### Gulp-sourcemaps
 
-Mappar ut CSS för utvecklingsverktygen i browsern så man lätt kan hitta till rätt SCSS-fil.
+Mappar ut CSS och Javascript för utvecklingsverktygen i browsern så man lätt kan hitta till rätt SCSS-fil eller JavaScriptfil.
+
+#### gulp-babel
+
+Konverterar ES6 och nya till ES5
 
 ## Om systemet
 
